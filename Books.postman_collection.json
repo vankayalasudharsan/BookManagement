@@ -1,0 +1,564 @@
+{
+	"info": {
+		"_postman_id": "ef08baf7-ef67-43a2-b00a-0271c1e8305c",
+		"name": "Books",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "30774998"
+	},
+	"item": [
+		{
+			"name": "List",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "{{url}}/books/list"
+			},
+			"response": [
+				{
+					"name": "Empty Data",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": "{{url}}/books/list"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "42"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"2a-HqbWbNBTVr8xhmS6kuUy1j9ID/Q\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 30 Oct 2023 14:01:50 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": true,\n    \"message\": \"No Books Found\"\n}"
+				},
+				{
+					"name": "Success",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": "{{url}}/books/list"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "505"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"1f9-kRD4IX46UUfIowyVNdOzoXP4B1I\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 30 Oct 2023 14:34:09 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": true,\n    \"message\": \"Books fetched successfully\",\n    \"data\": [\n        {\n            \"_id\": \"653fbbe0b2832cff00440afd\",\n            \"title\": \"Full Limits\",\n            \"author\": \"Mukesh Bansal\",\n            \"summary\": \"Motivational Content about the life\",\n            \"updatedAt\": \"2023-10-30T14:27:45.275Z\",\n            \"deletedAt\": null,\n            \"createdAt\": \"2023-10-30T14:21:20.691Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"653fbed91349210f16ea3403\",\n            \"title\": \"No Limits\",\n            \"author\": \"Mukesh Bansal\",\n            \"summary\": \"Motivational Content about the life\",\n            \"updatedAt\": null,\n            \"deletedAt\": null,\n            \"createdAt\": \"2023-10-30T14:34:01.333Z\",\n            \"__v\": 0\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\":\"No Limits\",\r\n    \"author\":\"Mukesh Bansal\",\r\n    \"summary\":\"Motivational Content about the life\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{url}}/books/create"
+			},
+			"response": [
+				{
+					"name": "Success",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\":\"No Limits\",\r\n    \"author\":\"Mukesh Bansal\",\r\n    \"summary\":\"Motivational Content about the life\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{url}}/books/create"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "270"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"10e-OdsqUmWTT+3ZohjMyVQO+qYm7iE\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 30 Oct 2023 14:21:20 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": true,\n    \"message\": \"Books Created successfully\",\n    \"data\": {\n        \"title\": \"No Limits\",\n        \"author\": \"Mukesh Bansal\",\n        \"summary\": \"Motivational Content about the life\",\n        \"updatedAt\": null,\n        \"deletedAt\": null,\n        \"_id\": \"653fbbe0b2832cff00440afd\",\n        \"createdAt\": \"2023-10-30T14:21:20.691Z\",\n        \"__v\": 0\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"653fbbe0b2832cff00440afd\",\r\n    \"title\": \"Full Limits\"\r\n   \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{url}}/books/update"
+			},
+			"response": [
+				{
+					"name": "Error",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"653fbbe0b2832cff00440af7\",\r\n    \"title\": \"Full Limits\"\r\n   \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{url}}/books/update"
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "42"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"2a-1o/qHSTZAqNCiUqJD+SVrrtG/mg\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 30 Oct 2023 14:27:58 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": true,\n    \"message\": \"Book not found\"\n}"
+				},
+				{
+					"name": "Success",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"653fbbe0b2832cff00440afd\",\r\n    \"title\": \"Full Limits\"\r\n   \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{url}}/books/update"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "293"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"125-USct9K4OtJ1fIhHpyxHvXYIxCSM\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 30 Oct 2023 14:27:11 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": true,\n    \"message\": \"Book Updated Successfully\",\n    \"data\": {\n        \"_id\": \"653fbbe0b2832cff00440afd\",\n        \"title\": \"Full Limits\",\n        \"author\": \"Mukesh Bansal\",\n        \"summary\": \"Motivational Content about the life\",\n        \"updatedAt\": \"2023-10-30T14:27:11.648Z\",\n        \"deletedAt\": null,\n        \"createdAt\": \"2023-10-30T14:21:20.691Z\",\n        \"__v\": 0\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\":\"653fbbe0b2832cff00440afd\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{url}}/books/delete"
+			},
+			"response": [
+				{
+					"name": "Error",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":\"653fb2f80aae00d165400089\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{url}}/books/delete"
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "42"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"2a-1o/qHSTZAqNCiUqJD+SVrrtG/mg\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 30 Oct 2023 14:33:06 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": true,\n    \"message\": \"Book not found\"\n}"
+				},
+				{
+					"name": "Success",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":\"653fbbe0b2832cff00440afd\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{url}}/books/delete"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "53"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"35-2nz/9DWHsWUkE4roZa45KKwxdHI\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 30 Oct 2023 14:34:34 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": true,\n    \"message\": \"Book Deleted Successfully\"\n}"
+				}
+			]
+		},
+		{
+			"name": "View",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/books/view?id=653fbbe0b2832cff00440afd",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"books",
+						"view"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "653fbbe0b2832cff00440afd"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Error",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/books/view?id=653fbbe0b2832cff00440afa",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"books",
+								"view"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "653fbbe0b2832cff00440afa"
+								}
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "42"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"2a-1o/qHSTZAqNCiUqJD+SVrrtG/mg\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 30 Oct 2023 15:09:01 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": true,\n    \"message\": \"Book not found\"\n}"
+				},
+				{
+					"name": "Success",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/books/view?id=653fbbe0b2832cff00440afd",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"books",
+								"view"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "653fbbe0b2832cff00440afd"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "323"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"143-M1Ntufw/4fk8RNni9ljk3adguzM\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 30 Oct 2023 15:09:49 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": true,\n    \"message\": \"Book Details Fetched Successfully\",\n    \"data\": {\n        \"_id\": \"653fbbe0b2832cff00440afd\",\n        \"title\": \"Full Limits\",\n        \"author\": \"Mukesh Bansal\",\n        \"summary\": \"Motivational Content about the life\",\n        \"updatedAt\": \"2023-10-30T14:27:45.275Z\",\n        \"deletedAt\": \"2023-10-30T14:34:34.625Z\",\n        \"createdAt\": \"2023-10-30T14:21:20.691Z\",\n        \"__v\": 0\n    }\n}"
+				}
+			]
+		}
+	]
+}
